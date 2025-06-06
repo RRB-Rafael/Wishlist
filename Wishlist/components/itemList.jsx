@@ -10,18 +10,18 @@ export default function ItemList({ item, markItem, unmarkItem, removeItem }) {
         </Text>
         {!item?.bought ? (
         <TouchableOpacity style={styles.actionIcon} onPress={() => markItem(item?.id)}>
-            <Ionicons name='bag-check-outline' size={24} color = '#fff'/>
+            <Ionicons name='lock-closed' size={24} color = '#5C3023'/>
         </TouchableOpacity>
         ) : (
             <TouchableOpacity style={styles.actionIcon} onPress={() => unmarkItem(item?.id)}>
-            <Ionicons name='bag-remove-outline' size={24} color = '#fff'/>
+            <Ionicons name='lock-open' size={24} color = '#5C3023'/>
         </TouchableOpacity>
         )}
         <TouchableOpacity 
-            style={[styles.actionIcon, {backgroundColor: "darkred"}]}
+            style={[styles.actionIcon, {backgroundColor: "#5C3023"}]}
             onPress={() => removeItem(item?.id)}
         >
-            <Ionicons name= 'trash-bin-outline' size= {24} color='#fff'/>
+            <Ionicons name= 'remove-circle' size= {24} color='#FED664'/>
         </TouchableOpacity>
     </View>
   )
@@ -29,11 +29,9 @@ export default function ItemList({ item, markItem, unmarkItem, removeItem }) {
 
 const styles = StyleSheet.create({
 itemList:{
-    backgroundColor: '#000000c0',
+    backgroundColor: '#976532',
     padding: 15,
-    borderRadius: 7,
-    borderWidth: 2,
-    borderColor: 'white',
+    borderRadius: 15,
     marginVertical: 3,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -58,6 +56,6 @@ actionIcon:{
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
-    backgroundColor: 'darkgreen'
+    backgroundColor: '#FED664'
 }
 })

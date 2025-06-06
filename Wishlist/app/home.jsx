@@ -75,7 +75,7 @@ const saveItemToDevice = async () => {
 
   const removeItem = itemId => {
     Alert.alert(
-      'Excluir produto?','Confirma a exclusão deste produto?',
+      'Excluir produto?','Confirma a exclusão deste item?',
       [
         {
           text: 'Sim', onPress: () => {
@@ -92,7 +92,7 @@ const saveItemToDevice = async () => {
 
   const removeAll = () => {
     Alert.alert(
-      "Limpar lista?", "Confirmaa exclusão de TODOS os produtos?",
+      "Limpar lista?", "Confirmar exclusão de TODOS seus itens?",
       [
         {
           text: 'Sim', 
@@ -161,9 +161,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#000000c0',
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
+        backgroundColor: '#111119',
     },
 
     title: {
@@ -179,29 +177,29 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       paddingHorizontal: 20,
-      backgroundColor: '#000000c0',
-      borderTopLeftRadius: 30,
-      borderTopRightRadius: 30,
+      backgroundColor: '#976532',
+      borderTopLeftRadius: 40,
+      borderTopRightRadius: 40,
     },
 
     inputContainer: {
-      backgroundColor: "#000",
+      backgroundColor: "#dfe0d8",
       elevation: 40,
       flex: 1,
       height: 50,
       marginVertical: 20,
-      borderRadius: 30,
+      borderRadius: 20,
       paddingHorizontal: 20,
       justifyContent: 'center',
     },
 
     iconContainer: {
-      height: 50,
-      width: 50,
-      backgroundColor: '#000',
+      height: 40,
+      width: 40,
+      backgroundColor: '#976532',
       borderRadius: 25,
       elevation: 40,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     }
 })
